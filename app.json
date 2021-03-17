@@ -1,19 +1,19 @@
 {
-  "name": "link2gdrive",
+  "name": "bot4mirror",
   "description": "This is a Telegram bot for mirroring files on the internet to Google Drive.",
   "logo": "https://telegra.ph/file/3927687333b6d5b407725.jpg",
   "keywords": [
     "telegram",
-    "link2gdrive",
+    "qxyzdrive",
     "mirror",
     "python",
     "aria",
     "mirror",
     "googledrive"
   ],
-  "repository": "https://github.com/zoeyzsz/link2gdrive",
-  "success_url": "https://github.com/zoeyzsz/link2gdrive",
-  "website": "https://github.com/zoeyzsz/link2gdrive",
+  "repository": "https://github.com/zoeyzsz/qxyzdrive",
+  "success_url": "https://github.com/zoeyzsz/qxyzdrive",
+  "website": "https://github.com/zoeyzsz/qxyzdrive",
   "env": {
     "ENV": {
       "description": "Setting to ANYTHING will enable webhooks when in ENV mode. Don't Change !",
@@ -56,13 +56,17 @@
       "required": false
     },
     "AUTHORIZED_CHATS": {
-      "description": "(Optional Field) For automatic authorized chat with ID group. Example: -1001333194438",
+      "description": "(Optional Field) For automatic authorized chat with ID group",
       "required": false
     },
     "INDEX_URL": {
       "description": "(Optional Field) Refer to https://github.com/maple3142/GDIndex if you don't have you can skip this step.",
       "required": false
     },
+      "UPTOBOX_TOKEN": {
+        "description": "Uptobox token to mirror uptobox links. Get it from [Uptobox Premium Account](https://uptobox.com/my_account).",
+        "required": false
+      },
     "TELEGRAM_API": {
       "description": "This is to Authenticate to your Telegram account for downloading Telegram Files. You can get this from https://my.telegram.org",
       "required": true
@@ -82,6 +86,11 @@
     "MEGA_PASSWORD": {
       "description": "Your https://mega.nz Password Account",
       "required": true
+    },
+    "BLOCK_MEGA_FOLDER": {
+      "description": "Set true/false if you don't like user mirror from mega.nz (type folder)",
+      "value": "False",
+      "required": false
     },
     "BLOCK_MEGA_LINKS": {
       "description": "Set true/false if you don't like user mirror from mega.nz (type file)",
